@@ -14,7 +14,7 @@
   <input type="password" id="password" name="password"><br><br>
   <input type="Submit" value="LogIn">
 </form> 
-<a href="registration.jsp">Register</a>
+<a href="registrer.jsp">Register</a>
 
 </body>
 

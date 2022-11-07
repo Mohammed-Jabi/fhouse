@@ -14,9 +14,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class registrationServelete
- */
 @WebServlet("/register")
 public class registrationServelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -40,11 +37,11 @@ public class registrationServelete extends HttpServlet {
 			 pst.setString(4, umobil);
 			 
 			 int rowCount = pst.executeUpdate();
-			 dispatcher = request.getRequestDispatcher("registration.jsp");
+			 dispatcher = request.getRequestDispatcher("login.jsp");
 			 if (rowCount > 0) {
 				 request.setAttribute("status", "sucess");
 			 }else {
-				 request.setAttribute("status", "sailed");
+				 request.setAttribute("status", "failed");
 			 }
 		 }catch (Exception e) {
 			 e.printStackTrace();
